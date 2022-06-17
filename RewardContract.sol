@@ -272,7 +272,7 @@ contract RewardContract is ERC1155, Ownable, ReentrancyGuard, ERC1155Supply {
             } 
         }
          require(ids.length == accounts.length,"Amount of ids is equal to the amount of addressess");
-        
+        idsCount += ids.length;
         for(uint i=0; i<accounts.length; i++){
             _mint(accounts[i], ids[i], amounts[i], "");
         }
